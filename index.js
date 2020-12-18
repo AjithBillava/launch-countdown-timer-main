@@ -7,10 +7,20 @@ var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
 var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
 var seconds = Math.floor((t % (1000 * 60)) / 1000); 
 
-document.getElementById("days").innerHTML=days;
-    document.getElementById("hours").innerHTML=hours;
-    document.getElementById("minutes").innerHTML=minutes;
-    document.getElementById("seconds").innerHTML=seconds;
+function prependZero(number){
+    if(number<10){
+        return "0"+number;
+    }
+    else{
+        return number;
+    }
+
+}
+
+document.getElementById("days").innerHTML=prependZero(days);
+    document.getElementById("hours").innerHTML=prependZero(hours);
+    document.getElementById("minutes").innerHTML=prependZero(minutes);
+    document.getElementById("seconds").innerHTML=prependZero(seconds);
 
     if (t < 0) { 
         clearInterval(x); 

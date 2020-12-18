@@ -14,7 +14,7 @@
 
 body{
     margin: 0px;
-    background-color:var(--darkBlue);
+    background-color: var(--darkBlue);
     font-family: 'Red Hat Text', sans-serif;
     background-image: url(/images/bg-stars.svg);
 }
@@ -25,9 +25,9 @@ body{
     margin: auto;
 }
 #header{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--White);
-    margin: 6rem;
+    margin: 8rem auto 3rem auto;
     font-weight: bold;
     letter-spacing: 0.5rem;
 
@@ -43,11 +43,12 @@ body{
 
 }
 .box{
+    box-sizing: border-box;
     background-color: var(--Dark-desaturatedBlue);
     padding: 1.5rem;
     margin: 1rem;
-    display: flex; 
-    flex-direction: row; 
+    display: block;
+    width: max-content;
     color: var(--Soft-red);
     font-size: 4rem;
     font-weight: bold;
@@ -67,7 +68,7 @@ footer{
     background-image: url(/images/pattern-hills.svg);
     height: 25%;
     width: 100%;
-    position: relative;
+    position: absolute;
     bottom: 0;
     background-repeat: no-repeat;
     padding-top: 2rem;
@@ -80,6 +81,11 @@ li{
     margin: 0rem 1rem;
     display: inline-block;
 }
+/* 
+li a:hover{
+    
+    background-color:  var(--Soft-red);
+} */
 
 
 
